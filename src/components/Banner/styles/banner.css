@@ -1,0 +1,235 @@
+.banner {
+  color: white;
+  font-family: "Montserrat" !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-shadow: 0 1px 2px black;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0.1)), color-stop(var(--blackGlass)), to(black)) !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.1) 50%, var(--blackGlass), black) !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.banner span.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100% !important;
+  height: 100% !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.banner .bannerImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-repeat: no-repeat;
+  -webkit-animation: bannerMove 7500ms ease-in-out infinite alternate;
+          animation: bannerMove 7500ms ease-in-out infinite alternate;
+}
+
+.banner .innerBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 85%;
+  text-align: left;
+  grid-gap: 1em;
+}
+
+.banner .innerBanner .buttons {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.banner .innerBanner .titleData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 0.5em;
+}
+
+.banner .innerBanner .titleData .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 1em;
+  text-align: right;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-gap: 1em;
+}
+
+.banner .innerBanner .titleData .data span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  grid-gap: 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+.banner .innerBanner .titleData .data span i {
+  font-size: 0.8em;
+  color: var(--main);
+}
+
+.banner .innerBanner h1 {
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 1.8;
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
+
+@media (max-width: 992px) {
+  .banner .innerBanner h1 {
+    width: 100%;
+  }
+}
+
+.banner .innerBanner p {
+  font-weight: 500;
+  width: 43%;
+}
+
+@media (max-width: 992px) {
+  .banner .innerBanner p {
+    width: 100%;
+  }
+}
+
+.animatedBanner {
+  -webkit-animation: backgroundMove 7500ms ease-in-out infinite alternate, fadeIn 1000ms ease-in-out !important;
+          animation: backgroundMove 7500ms ease-in-out infinite alternate, fadeIn 1000ms ease-in-out !important;
+}
+
+.scrolledBanner {
+  background-attachment: fixed;
+  background-position: 50% 15%;
+  background-size: cover;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.scrolledBanner::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(0, 0, 0, 0.1)), color-stop(var(--blackGlass)), to(black));
+  background: linear-gradient(rgba(0, 0, 0, 0.1) 90%, var(--blackGlass), black);
+}
+
+@-webkit-keyframes backgroundMove {
+  0% {
+    background-position: 50% 69%;
+  }
+  100% {
+    background-position: 50% 15%;
+  }
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 50% 69%;
+  }
+  100% {
+    background-position: 50% 15%;
+  }
+}
+
+@-webkit-keyframes bannerMove {
+  0% {
+    -webkit-transform: translate(0%, -5%);
+            transform: translate(0%, -5%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 5%);
+            transform: translate(0%, 5%);
+  }
+}
+
+@keyframes bannerMove {
+  0% {
+    -webkit-transform: translate(0%, -5%);
+            transform: translate(0%, -5%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 5%);
+            transform: translate(0%, 5%);
+  }
+}
+
+@media (max-width: 992px) {
+  .innerBanner {
+    grid-gap: 0.1em;
+  }
+  .innerBanner h1 {
+    font-size: 2.5em !important;
+  }
+  h2.cHeader.titleRowName {
+    font-size: 1.4em !important;
+  }
+  .pageTitleRow {
+    margin-bottom: -55px !important;
+  }
+}
+/*# sourceMappingURL=banner.css.map */

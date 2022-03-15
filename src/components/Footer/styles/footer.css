@@ -1,0 +1,172 @@
+#footer-text {
+  text-transform: uppercase;
+}
+
+.footer {
+  font-size: 13px;
+  grid-gap: 0px;
+  z-index: 1;
+  background: var(--mainGlass);
+  color: var(--silver) !important;
+  font-family: "Montserrat" !important;
+  height: 35px;
+  max-height: 35px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100% !important;
+  border-top: 0px solid var(--main);
+  -webkit-animation: fadeIn 1000ms ease-in-out;
+          animation: fadeIn 1000ms ease-in-out;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer .hoverLink::before {
+  right: -1px !important;
+  height: 2px !important;
+  bottom: -4px !important;
+  background: var(--silverGlass) !important;
+}
+
+.footer .innerFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer .innerFooter div:not(.piratechs) {
+  margin-top: 1px !important;
+}
+
+.footer .innerFooter a {
+  font-weight: 600 !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer .innerFooter a:hover {
+  color: white !important;
+}
+
+.footer .innerFooter .copyright {
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer .innerFooter .copyright a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .innerFooter .piratechs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  grid-gap: 0.3em;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer .innerFooter .piratechs svg path {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer .innerFooter .piratechs a {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer .innerFooter .piratechs:hover a {
+  color: white !important;
+}
+
+.footer .innerFooter .piratechs:hover a::before {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+.footer .innerFooter .piratechs:hover svg path {
+  fill: white;
+}
+
+.footer a {
+  color: var(--silver) !important;
+  font-family: "Montserrat";
+  text-decoration: none;
+  font-weight: 400 !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer a i {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer a svg {
+  max-height: 19px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer a svg path {
+  fill: var(--silver);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer a svg:hover path {
+  fill: white;
+}
+
+.footer a:hover i {
+  color: white;
+}
+
+.footer i,
+.vertical-sep {
+  color: var(--silver);
+}
+
+.footer i.fab.fa-github {
+  margin-bottom: -2px;
+}
+
+.piratechs.hoverLink::before {
+  bottom: -1px !important;
+  right: -4px !important;
+}
+/*# sourceMappingURL=footer.css.map */

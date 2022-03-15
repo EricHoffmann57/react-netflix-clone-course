@@ -1,0 +1,292 @@
+.MuiBackdrop-root {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: var(--blackGlass) !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard {
+  color: var(--silver);
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100% !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard .index {
+  font-weight: 700;
+  font-family: "montserrat" !important;
+  color: var(--silver);
+  background: var(--mainGlass);
+  border-radius: 100px;
+  font-size: 0.85em !important;
+  min-height: 14px;
+  min-width: 14px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard .dashboardInner {
+  border-radius: 4px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100% !important;
+  margin: 0 auto;
+  overflow: auto;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard .dashboardInner .dashboardRow {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.3em 0.5em;
+  font-size: 0.55em;
+  width: 100% !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  grid-gap: 0.4em;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard .dashboardInner .dashboardRow .titleField {
+  text-align: left !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 0.35em;
+  padding: 0.35em;
+  font-size: 0.85em;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard .dashboardInner .dashboardRow .titleField i {
+  color: var(--mainGlass);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard .dashboardInner .dashboardRow:hover {
+  color: white !important;
+}
+
+.dashboard .dashboardInner .dashboardRow:hover span i {
+  color: var(--main) !important;
+}
+
+.dashboard .dashboardInner .dashboardRow:hover span .index {
+  background: var(--main) !important;
+  color: white !important;
+}
+
+.dashboard .dashboardInner .dashboardRow:hover span:hover .index {
+  color: white !important;
+}
+
+.dashboard .dashboardInner .dashboardTitleInnerRow {
+  font-size: 1em;
+  grid-gap: 0;
+  padding: 0em;
+  margin-bottom: 0.5em;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard .dashboardInner .dashboardTitleInnerRow div {
+  border-bottom: 3px solid var(--main);
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dashboard .dashboardInner .dashboardTitleInnerRow div:hover {
+  color: white !important;
+}
+
+.dashboard .dashboardInner .dashboardTitleInnerRow:hover {
+  color: var(--silver) !important;
+}
+
+.list {
+  position: relative !important;
+}
+
+.listItems {
+  color: white;
+  top: -10px;
+  left: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: montserrat;
+  font-weight: 500;
+  font-size: 0.69em;
+  width: 19.5px;
+  height: 19.5px;
+  padding: 0.5em;
+  border-radius: 100%;
+  background: var(--main);
+}
+
+.user {
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+ul li:not(.right) {
+  text-decoration: none;
+  font-family: "Montserrat";
+  color: var(--silver);
+  -webkit-transition: var(--transition) !important;
+  transition: var(--transition) !important;
+}
+
+ul li:not(.right):hover {
+  color: white;
+}
+
+ul li:not(.right) a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Montserrat";
+  color: #f2f2f2;
+  -webkit-transition: var(--transition) !important;
+  transition: var(--transition) !important;
+}
+
+ul li:not(.right) a:hover {
+  color: white;
+}
+
+ul li {
+  -webkit-transition: var(--transition) !important;
+  transition: var(--transition) !important;
+}
+
+ul.dash {
+  grid-gap: 20px;
+  -webkit-transition: var(--transition) !important;
+  transition: var(--transition) !important;
+}
+
+.iconButton:hover {
+  background: var(--mainGlass);
+}
+
+.iconButton:hover .listIcon .indexCircle {
+  color: var(--main);
+  background: var(--secondary) !important;
+}
+
+.name {
+  width: 67% !important;
+}
+
+.date {
+  width: 30% !important;
+}
+
+.votes,
+.rating {
+  width: 15% !important;
+}
+
+.delete {
+  width: 38% !important;
+}
+
+.customList {
+  margin-top: -60px;
+}
+
+.titleRowName .index {
+  color: var(--silver) !important;
+  font-size: 15px !important;
+  width: 1.25em !important;
+  height: 1.25em !important;
+  min-width: 1.25em !important;
+  max-width: 1.25em !important;
+  min-height: 1.25em !important;
+  cursor: pointer;
+  margin: 0.45em 0;
+  background: var(--main);
+  border-radius: 100px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.titleRowName .index:hover {
+  background: var(--secondary);
+}
+
+.titleRowName .index .indexNumber {
+  bottom: -4px;
+  position: relative;
+}
+
+.delete .index {
+  color: var(--silver) !important;
+  font-size: 15px !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  min-height: 20px !important;
+  margin: 0.45em 0;
+}
+
+.delete .index .indexNumber {
+  bottom: -4px;
+  position: relative;
+}
+/*# sourceMappingURL=dashboard.css.map */

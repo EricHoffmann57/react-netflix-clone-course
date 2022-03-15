@@ -1,0 +1,438 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, black), to(transparent));
+  background: linear-gradient(black 30%, transparent);
+  color: white;
+  font-family: montserrat;
+  padding: 1.5em 0;
+  -webkit-animation: fadeIn 1000ms ease-in-out;
+          animation: fadeIn 1000ms ease-in-out;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 93%;
+}
+
+header .inner .logo {
+  max-width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+header .inner .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .inner .navigation ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 35px !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner .navigation ul li {
+  max-height: 35px !important;
+}
+
+header .inner .navigation ul li:not(.right) {
+  margin-left: 20px;
+  text-decoration: none;
+  font-family: "Montserrat";
+  color: var(--silver);
+  cursor: pointer;
+  -webkit-transition: var(--transition) !important;
+  transition: var(--transition) !important;
+}
+
+header .inner .navigation ul li:not(.right):hover {
+  color: white;
+}
+
+header .inner .navigation ul li:not(.right) a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Montserrat";
+  color: var(--silver);
+  -webkit-transition: var(--transition) !important;
+  transition: var(--transition) !important;
+}
+
+header .inner .navigation ul li:not(.right) a:hover {
+  color: white;
+}
+
+header .inner button {
+  color: var(--silver) !important;
+  -webkit-backdrop-filter: none !important;
+          backdrop-filter: none !important;
+  background: transparent !important;
+  text-transform: capitalize !important;
+}
+
+header .inner button:hover {
+  color: var(--bg) !important;
+  background: white !important;
+}
+
+header .inner .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner .search .searchButton {
+  padding: 0 !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  min-width: 30px !important;
+  max-width: 30px !important;
+  grid-gap: 0.5em !important;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner .user .customAvatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px !important;
+  font-weight: 600;
+  font-size: 1em;
+  margin: 0 auto;
+  margin-left: 20px;
+  color: var(--silver);
+  background: var(--main);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner .user .customAvatar .avatarLetter {
+  -webkit-transition: var(--transition) !important;
+  transition: var(--transition) !important;
+}
+
+header .inner .user .customAvatar:hover {
+  color: var(--bg) !important;
+  background: var(--silver) !important;
+}
+
+header .inner .user .caret {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+  -webkit-transition: 1s cubic-bezier(0.77, 0.2, 0.05, 1) !important;
+  transition: 1s cubic-bezier(0.77, 0.2, 0.05, 1) !important;
+}
+
+header .inner .user .logout {
+  opacity: 0;
+  position: absolute;
+  top: 74px;
+  right: 0;
+  width: 254.19px;
+  height: 100%;
+  padding: 4em 1em;
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background: var(--blackGlass);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner .user .logout p {
+  margin-top: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner .user .logout .logoutButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 0.5em;
+  max-height: none;
+  padding: 0.5em 2em !important;
+  margin-bottom: 1em !important;
+  color: var(--bg) !important;
+  background: var(--silver) !important;
+}
+
+header .inner .user .logout .logoutButton:hover {
+  background: var(--main) !important;
+  color: var(--silver) !important;
+}
+
+@media (max-width: 992px) {
+  header .inner .user .logout {
+    padding: 5.5em 1em !important;
+  }
+}
+
+header .inner .user:hover .customAvatar {
+  color: var(--bg) !important;
+  background: var(--silver) !important;
+}
+
+header .inner .user:hover .customAvatar:hover {
+  background: var(--main) !important;
+  color: var(--silver) !important;
+}
+
+header .inner .user:hover .logout {
+  opacity: 1;
+}
+
+header .inner .user:hover .caret i {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.scrolledHeader {
+  background: var(--blackGlass);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.scrolledHeader .customAvatar {
+  color: var(--bg) !important;
+  background: var(--silver) !important;
+}
+
+.scrolledHeader .customAvatar:hover {
+  color: white !important;
+  background: var(--main) !important;
+}
+
+.scrolledHeader .dash button {
+  -webkit-backdrop-filter: none !important;
+          backdrop-filter: none !important;
+  text-transform: capitalize !important;
+  color: var(--bg) !important;
+  background: var(--silver) !important;
+}
+
+.scrolledHeader .dash button:hover {
+  color: white !important;
+  background: var(--mainGlass) !important;
+}
+
+@media (min-width: 992px) {
+  .mobileDash {
+    display: none !important;
+  }
+  .content .topicRow .rowTitle {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 992px) {
+  .navigationLeft ul {
+    display: none !important;
+  }
+  .navigation .dash:not(.mobileDash):first-child {
+    display: none;
+  }
+  .navigation ul:not(.mobileDash) {
+    display: none;
+  }
+  .navigation ul:not(.authHeaderRightSide) {
+    display: none;
+  }
+}
+
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 0.75em 0.3em 0.3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: black !important;
+}
+
+.drawerDash {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  grid-gap: 0.65em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-animation: fadeIn 1000ms ease-in-out;
+          animation: fadeIn 1000ms ease-in-out;
+}
+
+.drawerDash .firstLink {
+  padding-top: 1em;
+}
+
+.drawerDash .piratechs svg {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.drawerDash .piratechs svg path {
+  fill: var(--mainGlass) !important;
+}
+
+.drawerDash li {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.drawerDash a {
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  grid-gap: 0.4em;
+  color: var(--silver) !important;
+}
+
+.drawerDash a:first-child {
+  width: 100%;
+  text-align: center;
+}
+
+.drawerDash a i {
+  color: var(--mainGlass);
+  font-size: 14px;
+}
+
+.drawerFooter {
+  padding: 1em 1em 1em 1em;
+}
+
+.drawerFooter a {
+  font-size: 14px !important;
+}
+
+.css-5n5rd1 {
+  min-width: 56px;
+  color: white;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.css-cveggr-MuiListItemIcon-root {
+  min-width: 56px;
+  color: var(--silver);
+}
+
+.mobileDash {
+  grid-gap: 0.1em !important;
+}
+
+.css-1ab2xsx {
+  background-color: black !important;
+}
+
+.mobileLogout {
+  font-size: 1em !important;
+  background: var(--main) !important;
+  color: var(--silver) !important;
+  margin-top: 1em !important;
+}
+/*# sourceMappingURL=header.css.map */

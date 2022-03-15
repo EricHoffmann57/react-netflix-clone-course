@@ -1,0 +1,195 @@
+@mixin movieSize {
+  max-height: var(--posterH) !important;
+  max-width: var(--posterW) !important;
+}
+
+.movie {
+  @include movieSize;
+  cursor: pointer;
+  position: relative;
+  object-fit: cover !important;
+  border-radius: 4px !important;
+  color: var(--silver);
+  transition: var(--transition) !important;
+  span {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px !important;
+    object-fit: contain !important;
+    @include movieSize;
+    transition: var(--transition) !important;
+    .moviePoster {
+      transition: var(--transition) !important;
+      @include movieSize;
+    }
+  }
+  .overlay {
+    height: 20%;
+    opacity: 1;
+    z-index: 1;
+    padding: 1em 1.5em;
+    font-size: 0.75em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    border-radius: 0px !important;
+    object-fit: contain !important;
+    @include movieSize;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left !important;
+    background: var(--blackGlass);
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+    .titleData {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      max-height: 30px;
+      justify-content: space-between;
+      grid-gap: 0.5em;
+      h2 {
+        width: 100% !important;
+        font-weight: 700 !important;
+        font-size: 1.04em !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      // clip-path: polygon(105% 0%, 105% 30px, 0% 30px, 0% 0%);
+      transition: var(--transition);
+      .data {
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+        font-weight: 500;
+        animation: fadeIn 100ms ease-in-out;
+        transition: var(--transition);
+        span {
+          display: flex;
+          grid-gap: 0.5em;
+          align-items: center;
+          justify-content: flex-end;
+          text-align: right;
+          font-size: 0.85em;
+          font-weight: 700 !important;
+          i {
+            font-size: 0.8em;
+            color: var(--mainGlass);
+            transition: var(--transition);
+          }
+        }
+      }
+    }
+    .movieDescription {
+      opacity: 0;
+      font-size: 0.965em;
+      font-weight: 600;
+      animation: fadeIn var(--transition);
+    }
+  }
+  .buttons {
+    opacity: 0;
+    padding: 0.75em 1em !important;
+    grid-gap: 0.5em !important;
+    margin: 0 auto !important;
+    height: 35px !important;
+    justify-content: center;
+    width: 100% !important;
+    bottom: 16px !important;
+    right: 0 !important;
+    position: absolute;
+    left: 0 !important;
+    transition: var(--transition) !important;
+    .movieButton {
+      opacity: 0;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      min-height: 0px;
+      padding: 0 !important;
+      color: var(--bg);
+      background: var(--silver);
+      transition: var(--transition) !important;
+      i {
+        font-size: 9.6px !important;
+      }
+      &:hover {
+        color: white;
+        background: var(--main);
+      }
+    }
+  }
+
+  // Hover Movie
+  &:hover {
+    color: white;
+    transform: scale(1.08);
+    .moviePoster {
+      transform: scale(0.92) !important;
+    }
+    .overlay {
+      opacity: 1 !important;
+      padding: 1.5em !important;
+      object-fit: contain !important;
+      border-radius: 4px !important;
+      padding: 1em 1.5em 0em !important;
+      height: var(--posterH) !important;
+      @include movieSize;
+      .titleData {
+        transform: scale(0.92) !important;
+        clip-path: none !important;
+        padding: 1em 0 !important;
+        max-height: none !important;
+        i {
+          color: var(--main) !important;
+        }
+      }
+      .movieDescription {
+        transform: scale(0.92) !important;
+        opacity: 1 !important;
+      }
+      .buttons {
+        transform: scale(0.99) !important;
+        opacity: 1;
+        .movieButton {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.skeleton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include movieSize;
+  width: 100%;
+  color: white;
+  transition: var(--transition);
+  animation: skeleton 1s ease-in-out;
+  .icon {
+    height: 50px;
+    width: auto;
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background: var(--secondary);
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+  70% {
+    box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    background: var(--bg);
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}

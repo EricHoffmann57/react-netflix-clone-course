@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,6 +25,5 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ]
+    "src"   ]
 }

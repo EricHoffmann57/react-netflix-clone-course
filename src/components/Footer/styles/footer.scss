@@ -1,0 +1,133 @@
+// Footer Styling
+
+#footer-text {
+  text-transform: uppercase;
+}
+
+.footer {
+  font-size: 13px;
+  grid-gap: 0px;
+  z-index: 1;
+  background: var(--mainGlass);
+  color: var(--silver) !important;
+  font-family: "Montserrat" !important;
+  height: 35px;
+  max-height: 35px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  flex-wrap: wrap;
+  width: 100% !important;
+  border-top: 0px solid var(--main);
+  animation: fadeIn 1000ms ease-in-out;
+  transition: var(--transition);
+  .hoverLink {
+    &::before {
+      right: -1px !important;
+      height: 2px !important;
+      bottom: -4px !important;
+      background: var(--silverGlass) !important;
+    }
+  }
+  .innerFooter {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    margin: 0 auto;
+    transition: var(--transition);
+    div:not(.piratechs) {
+      margin-top: 1px !important;
+    }
+    a {
+      font-weight: 600 !important;
+      transition: var(--transition);
+      &:hover {
+        color: white !important;
+      }
+    }
+    .copyright {
+      cursor: pointer;
+      transition: var(--transition);
+      a {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .piratechs {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      grid-gap: 0.3em;
+      transition: var(--transition);
+      svg {
+        path {
+          transition: var(--transition);
+        }
+      }
+      a {
+        transition: var(--transition);
+      }
+      &:hover {
+        a {
+          color: white !important;
+          &::before {
+            transform: scale(1, 1);
+            transition: 500ms ease-in-out;
+          }
+        }
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+  a {
+    color: var(--silver) !important;
+    font-family: "Montserrat";
+    text-decoration: none;
+    font-weight: 400 !important;
+    transition: var(--transition);
+    i {
+      transition: var(--transition);
+    }
+    svg {
+      max-height: 19px;
+      object-fit: contain;
+      transition: var(--transition);
+      path {
+        fill: var(--silver);
+        transition: var(--transition);
+      }
+      &:hover {
+        path {
+          fill: white;
+        }
+      }
+    }
+    &:hover {
+      i {
+        color: white;
+      }
+    }
+  }
+}
+
+.footer i,
+.vertical-sep {
+  color: var(--silver);
+}
+.footer {
+  i.fab.fa-github {
+    margin-bottom: -2px;
+  }
+}
+
+.piratechs.hoverLink::before {
+  bottom: -1px !important;
+  right: -4px !important;
+}
