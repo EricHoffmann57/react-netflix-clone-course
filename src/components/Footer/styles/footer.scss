@@ -17,7 +17,7 @@
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0;
   flex-wrap: wrap;
   width: 100% !important;
@@ -35,7 +35,7 @@
   .innerFooter {
     display: flex;
     width: 95%;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
     transition: var(--transition);
     div:not(.piratechs) {
@@ -54,35 +54,6 @@
       a {
         display: flex;
         align-items: center;
-      }
-    }
-    .piratechs {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      grid-gap: 0.3em;
-      transition: var(--transition);
-      svg {
-        path {
-          transition: var(--transition);
-        }
-      }
-      a {
-        transition: var(--transition);
-      }
-      &:hover {
-        a {
-          color: white !important;
-          &::before {
-            transform: scale(1, 1);
-            transition: 500ms ease-in-out;
-          }
-        }
-        svg {
-          path {
-            fill: white;
-          }
-        }
       }
     }
   }
@@ -125,9 +96,4 @@
   i.fab.fa-github {
     margin-bottom: -2px;
   }
-}
-
-.piratechs.hoverLink::before {
-  bottom: -1px !important;
-  right: -4px !important;
 }

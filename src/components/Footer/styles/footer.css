@@ -21,7 +21,7 @@
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: center;
   padding: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -47,13 +47,13 @@
   width: 95%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: center;
   margin: 0 auto;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.footer .innerFooter div:not(.piratechs) {
+.footer .innerFooter {
   margin-top: 1px !important;
 }
 
@@ -82,7 +82,7 @@
           align-items: center;
 }
 
-.footer .innerFooter .piratechs {
+.footer .innerFooter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,30 +95,27 @@
   transition: var(--transition);
 }
 
-.footer .innerFooter .piratechs svg path {
+.footer .innerFooter svg path {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.footer .innerFooter .piratechs a {
+.footer .innerFooter a {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.footer .innerFooter .piratechs:hover a {
+.footer .innerFooter:hover a {
   color: white !important;
 }
 
-.footer .innerFooter .piratechs:hover a::before {
+.footer .innerFooter:hover a::before {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
 
-.footer .innerFooter .piratechs:hover svg path {
-  fill: white;
-}
 
 .footer a {
   color: var(--silver) !important;
@@ -165,8 +162,4 @@
   margin-bottom: -2px;
 }
 
-.piratechs.hoverLink::before {
-  bottom: -1px !important;
-  right: -4px !important;
-}
 /*# sourceMappingURL=footer.css.map */
