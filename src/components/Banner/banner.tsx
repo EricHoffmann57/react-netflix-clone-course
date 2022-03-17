@@ -165,7 +165,7 @@ const Banner: React.FC<State> = ({user, setUser, fetchMovie, movie, setMovie}) =
                 <p className="bannerDescription" title={movie?.overview}> {movie?.overview === `` ?  
                     <div className="noDesc">
                         This Movie Has No Description!
-                    </div> : movieName?.length > 19 ? truncate(movie?.overview, 135) : truncate(movie?.overview, 145)}</p>
+                    </div> : movieName?.length > 19 ? truncate(movie?.overview, 135) : truncate(movie?.overview, 777)}</p>
             </div>
         </div>
     );

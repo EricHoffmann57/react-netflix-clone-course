@@ -20,7 +20,7 @@
 
 ### To go further
 
--   Internationalization 
+-   Internationalization
 -   Display trailers from youtube
 
 ## How to get data
