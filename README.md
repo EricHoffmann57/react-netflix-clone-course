@@ -1,4 +1,4 @@
-# react-netflix-clone-course
+# react-netflix-clone-course Eric Hoffmann
 
 ## Features
 
